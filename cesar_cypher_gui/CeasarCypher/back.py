@@ -37,11 +37,8 @@ def decode(text, offset=3):
     result = ""
     for i in range(len(text)):
         char = text[i]
-
-        # Encrypt uppercase characters
         if char.isupper():
             result += _decrypt_uppercase(char, offset)
-        # Encrypt lowercase characters
         else:
             result += _decrypt_lowercase(char, offset)
     return result
